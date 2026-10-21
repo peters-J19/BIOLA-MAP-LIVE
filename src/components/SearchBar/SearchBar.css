@@ -1,0 +1,138 @@
+/* SearchBar.css */
+
+.search-container {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.search-toggle {
+  display: flex;
+  margin-bottom: 0.75rem;
+}
+
+.toggle-button {
+  flex: 1;
+  padding: 0.5rem;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.toggle-button.active {
+  color: white;
+  border-bottom: 2px solid #e86e25; /* Biola orange */
+}
+
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  font-size: 0.9rem;
+}
+
+.search-button {
+  background-color: white;
+  color: #0c2340; /* Biola blue */
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-height: 250px;
+  overflow-y: auto;
+  z-index: 20;
+  margin-top: 2px;
+}
+
+.dropdown-item {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.dropdown-item:hover {
+  background-color: #f5f5f5;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.item-name {
+  font-weight: 500px;
+  color: #000000;
+}
+
+.item-category {
+  font-size: 0.8rem;
+  color: #666;
+  background-color: #f0f0f0;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* Directions Form */
+.directions-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.direction-inputs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.direction-select {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 8L2 4h8z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 0.75rem;
+}
+
+.direction-button {
+  background-color: #e86e25; /* Biola orange */
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.direction-button:hover {
+  background-color: #d15e1c;
+} 
