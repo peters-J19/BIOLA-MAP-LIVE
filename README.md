@@ -17,7 +17,7 @@ React frontend, Express API and a PostgreSQL database, each hosted separately.
 
 - **API.** A small Express service with read-only routes for locations, the directory, categories and opening hours, querying Supabase's PostgreSQL through `pg`.
 - **Safe queries.** Every query is parameterized. The opening hours route reads a column named after the day of the week, which can't be parameterized, so the day is checked against a fixed list first.
-- **Fast panels.** The location photos are preloaded in the background, staggered so they don't compete with the first page load, so the details panel opens instantly.
+- **Fast panels.** The location photos are preloaded in the background, one after another, so the details panel opens without waiting on an image.
 
 **Tech:** React, Express, PostgreSQL (`pg`), Supabase, Vercel, Railway.
 
