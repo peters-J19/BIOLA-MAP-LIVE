@@ -1,32 +1,24 @@
 # Biola Campus Map
 
-An interactive map of the Biola University campus. You can pan and zoom the map, search for buildings, browse a directory grouped by category, and open any location to see its photo, description and today's opening hours.
+An interactive map of the Biola University campus. Visitors can explore the map, search for any building, browse a directory organized by category, and open a location to see its photo, description and opening hours.
 
-## Background
+It started as a team project for Biola's Software Engineering course. After the course, I took it to production on my own, with the database on Supabase, the API on Railway and the frontend on Vercel, where it was live for several months.
 
-This started as a team project for Biola's Software Engineering course. After the course, I deployed it to production myself: the PostgreSQL database on Supabase, the Express API on Railway, and the React frontend on Vercel. It was live for several months. It's offline now (the API is no longer hosted), and this repo is the version that was deployed.
+## What it does
 
-## Tech
+- **Interactive map.** Drag to pan and zoom in and out of the campus map, with a marker for every location.
+- **Search and directory.** Search for a building by name, or browse a directory grouped into expandable categories.
+- **Location details.** Selecting a place opens its photo, description and today's opening hours, with a button for the full weekly schedule.
+- Designed for desktop screens.
 
-- **Frontend:** React (Create React App), with a custom pan-and-zoom map
-- **API:** Express and `pg`, with read-only routes for locations, the directory, categories and opening hours
-- **Database:** PostgreSQL on Supabase
-- **Hosting:** Vercel (frontend), Railway (API), Supabase (database)
+## How it's built
 
-Built for desktop. On mobile it shows a message asking you to use a computer.
+React frontend, Express API and a PostgreSQL database, each hosted separately.
 
-## Running locally
+- **API.** A small Express service with read-only routes for locations, the directory, categories and opening hours, querying Supabase's PostgreSQL through `pg`.
+- **Safe queries.** Every query is parameterized. The opening hours route reads a column named after the day of the week, which can't be parameterized, so the day is checked against a fixed list first.
+- **Fast panels.** The location photos are preloaded in the background, staggered so they don't compete with the first page load, so the details panel opens instantly.
 
-The database schema isn't in the repo, and the frontend currently calls the hosted API URL, so running it locally means creating the tables and pointing those calls at `http://localhost:5000`.
+**Tech:** React, Express, PostgreSQL (`pg`), Supabase, Vercel, Railway.
 
-```bash
-# API
-cd backend
-npm install
-# backend/.env: DB_USER, DB_HOST, DB_NAME, DB_PASS, DB_PORT
-npm start
-
-# Frontend
-npm install
-npm start
-```
+The hosted version has since been taken down, so this repo is here to showcase the code.
