@@ -2,7 +2,7 @@
 
 An interactive map of the Biola University campus. Visitors can explore the map, search for any building, browse a directory organized by category, and open a location to see its photo, description and opening hours.
 
-It started as a team project for Biola's Software Engineering course, where I was the project leader. I built the backend and API on my own and reworked most of the frontend code, starting from a teammate's Figma design. After the course, I took it to production, with the database on Supabase, the API on Railway and the frontend on Vercel, where it was live for several months.
+It started as a team project for Biola's Software Engineering course, where I was the project leader. I built the backend and API and reworked most of the frontend code, starting from a teammate's Figma design. After the course, I took it to production, with the database on Supabase, the API on Railway and the frontend on Vercel, where it was live for several months.
 
 ## What it does
 
